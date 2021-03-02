@@ -7,7 +7,22 @@ Vue.use(VueRouter)
 const routes = [
 	{
 		path: "/",
-		name: "dashboard",
+		name: "menu-1",
+		component: Dashboard
+	},
+	{
+		path: "/menu-2",
+		name: "menu-2",
+		component: Dashboard
+	},
+	{
+		path: "/submenu-1",
+		name: "submenu-1",
+		component: Dashboard
+	},
+	{
+		path: "/submenu-2",
+		name: "submenu-2",
 		component: Dashboard
 	}
 ]
