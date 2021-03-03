@@ -21,7 +21,7 @@ import Appbar from "@/components/core/Appbar"
 import Sidebar from "@/components/core/Sidebar"
 import Footer from "@/components/core/Footer"
 export default {
-	name: "LayoutDefault",
+	name: "DefaultLayout",
 	components: {
 		Appbar,
 		Sidebar,

@@ -69,7 +69,7 @@
 
 		<!-- LOGOUT -->
 		<template v-slot:append>
-			<v-list-item link to="/logout">
+			<v-list-item link @click="logout">
 				<v-list-item-icon>
 					<v-icon>mdi-logout</v-icon>
 				</v-list-item-icon>
@@ -102,6 +102,10 @@ export default {
 			if (submenu.some(val => val.link === this.$route.path)) {
 				return true
 			}
+		},
+		logout() {
+			this.$store.commit("LOGGED_IN", false)
+			this.$router.push("/login")
 		}
 	}
 }

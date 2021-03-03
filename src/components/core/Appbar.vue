@@ -15,17 +15,17 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex"
-
 export default {
 	name: "Appbar",
 	computed: {
-		...mapState(["drawer"])
+		drawer: function() {
+			return this.$store.state.SET_SIDEBAR
+		}
 	},
 	methods: {
-		...mapMutations({
-			setDrawer: "SET_SIDEBAR"
-		})
+		setDrawer(bool) {
+			this.$store.commit("SET_SIDEBAR", bool)
+		}
 	}
 }
 </script>

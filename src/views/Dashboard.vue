@@ -1,15 +1,15 @@
 <template>
-	<LayoutDefault>
+	<DefaultLayout>
 		<h1>Welcome Back</h1>
-	</LayoutDefault>
+	</DefaultLayout>
 </template>
 
 <script>
-import LayoutDefault from "@/layouts/LayoutDefault"
+import DefaultLayout from "@/layouts/DefaultLayout"
 export default {
 	name: "Dashboard",
 	components: {
-		LayoutDefault
+		DefaultLayout
 	},
 	data: () => ({
 		drawer: false
