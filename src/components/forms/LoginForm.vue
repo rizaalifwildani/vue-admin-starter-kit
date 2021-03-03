@@ -1,76 +1,74 @@
 <template>
-	<div>
-		<validation-observer ref="observer" v-slot="{ invalid }">
-			<form @submit.prevent="login(true)">
-				<v-card>
-					<v-card-title primary-title>
-						LOGIN
-					</v-card-title>
-					<v-container>
-						<template>
-							<v-row no-gutters>
-								<v-col cols="12" class="px-2">
-									<validation-provider
-										v-slot="{ errors }"
-										name="email"
-										rules="required|email"
-									>
-										<v-text-field
-											v-model="email"
-											:error-messages="errors"
-											label="Email"
-											required
-											type="email"
-											outlined
-										></v-text-field>
-									</validation-provider>
-								</v-col>
-								<v-col cols="12" class="px-2">
-									<validation-provider
-										v-slot="{ errors }"
-										name="password"
-										rules="required"
-									>
-										<v-text-field
-											v-model="password"
-											:error-messages="errors"
-											label="Password"
-											required
-											type="password"
-											outlined
-										></v-text-field>
-									</validation-provider>
-									<v-divider></v-divider>
-								</v-col>
-								<v-col cols="12" class="px-2">
-									<validation-provider name="rememberme">
-										<v-checkbox
-											v-model="rememberme"
-											value="1"
-											label="Remember Me"
-											type="checkbox"
-											color="primary"
-										></v-checkbox>
-									</validation-provider>
-								</v-col>
-								<v-col cols="12" class="my-3">
-									<v-btn
-										type="submit"
+	<validation-observer ref="observer" v-slot="{ invalid }">
+		<form @submit.prevent="login(true)">
+			<v-card>
+				<v-card-title primary-title>
+					LOGIN
+				</v-card-title>
+				<v-container>
+					<template>
+						<v-row no-gutters>
+							<v-col cols="12" class="px-2">
+								<validation-provider
+									v-slot="{ errors }"
+									name="email"
+									rules="required|email"
+								>
+									<v-text-field
+										v-model="email"
+										:error-messages="errors"
+										label="Email"
+										required
+										type="email"
+										outlined
+									></v-text-field>
+								</validation-provider>
+							</v-col>
+							<v-col cols="12" class="px-2">
+								<validation-provider
+									v-slot="{ errors }"
+									name="password"
+									rules="required"
+								>
+									<v-text-field
+										v-model="password"
+										:error-messages="errors"
+										label="Password"
+										required
+										type="password"
+										outlined
+									></v-text-field>
+								</validation-provider>
+								<v-divider></v-divider>
+							</v-col>
+							<v-col cols="12" class="px-2">
+								<validation-provider name="rememberme">
+									<v-checkbox
+										v-model="rememberme"
+										value="1"
+										label="Remember Me"
+										type="checkbox"
 										color="primary"
-										:disabled="invalid"
-										block
-										:loading="loading"
-									>
-										submit
-									</v-btn>
-								</v-col>
-							</v-row>
-						</template>
-					</v-container>
-				</v-card>
-			</form>
-		</validation-observer>
-	</div>
+									></v-checkbox>
+								</validation-provider>
+							</v-col>
+							<v-col cols="12" class="my-3">
+								<v-btn
+									type="submit"
+									color="primary"
+									:disabled="invalid"
+									block
+									:loading="loading"
+								>
+									submit
+								</v-btn>
+							</v-col>
+						</v-row>
+					</template>
+				</v-container>
+			</v-card>
+		</form>
+	</validation-observer>
 </template>
 
 <script>

@@ -1,8 +1,10 @@
 <template>
 	<AuthLayout>
-		<v-row align="center" justify="center" class="login">
-			<v-col cols="4">
-				<LoginForm />
+		<v-row align="center" justify="center">
+			<v-col md="4" class="mt-12">
+				<v-container class="">
+					<LoginForm />
+				</v-container>
 			</v-col>
 		</v-row>
 	</AuthLayout>

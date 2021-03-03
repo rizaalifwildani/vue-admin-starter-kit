@@ -1,6 +1,8 @@
 <template>
-	<v-app>
-		<slot />
+	<v-app class="login">
+		<v-main>
+			<slot />
+		</v-main>
 	</v-app>
 </template>
 
